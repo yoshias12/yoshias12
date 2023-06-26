@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="detail_poduct1.css">
+  <title>RAINS</title>
+</head>
+<body>
+
+    <header class="sticky-header">
+        <a href="index.html" class="logo" onclick="scrollToTop()">
+          <img src="logo.png" alt="Logo">
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+<!-- konten menu detail_produk -->
+<div class="product-container">
+    <div class="product-image">
+      <img src="" alt="Gambar Produk" id="product-image">
+    </div>
+    <div class="product-description">
+      <h3 id="product-name"></h3>
+      <p class="product-price" id="product-price"></p>
+      <p class="product-info" id="product-info"></p>
+      <p class="order-now">Order Now :</p>
+      <a href="https://api.whatsapp.com/send?phone=6281249878026" class="wa-button" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+   <!-- ... -->
+
+   <script>
+    // Mendapatkan parameter product dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productIndex = urlParams.get('product');
+
+    // Data deskripsi produk
+    const products = [
+      {
+        image: 'product1.jpg',
+        name: 'Product 1',
+        price: '$10.99',
+        info: 'The white shirt is a versatile and timeless wardrobe staple that exudes elegance and simplicity. Made from high-quality materials, it offers a comfortable and breathable fit. Whether dressed up with tailored pants or paired with jeans for a casual look, this white shirt is a must-have for effortless style.'
+      },
+      {
+        image: 'product2.jpg',
+        name: 'Product 2',
+        price: '$19.99',
+        info: 'The green "Freak" shirt is a bold and eye-catching statement piece that adds a pop of color to your wardrobe. Made with premium fabric, it ensures a comfortable and soft feel against your skin. Showcasing its unique design and vibrant green hue, this shirt is perfect for those who embrace their individuality with confidence.'
+      },
+      {
+        image: 'product3.jpg',
+        name: 'Product 3',
+        price: '$14.99',
+        info: 'The green sweater is a cozy and stylish addition to your winter wardrobe. Crafted with soft and warm fabric, it provides exceptional comfort on chilly days. Its versatile green hue makes it easy to pair with various outfits, offering both comfort and fashion-forward appeal.'
+      },
+      {
+        image: 'product4.jpg',
+        name: 'Product 4',
+        price: '$24.99',
+        info: 'The red "Dont Wait Up" sweater is a statement piece that combines boldness with comfort. Made from premium knit fabric, it offers a cozy and soft feel. With its eye-catching red color and empowering message, this sweater is perfect for those who embrace a confident and fearless attitude.'
+      },
+      {
+        image: 'product5.jpg',
+        name: 'Product 5',
+        price: '$29.99',
+        info: 'The pink "Double Meaning" shirt is a playful and intriguing fashion choice. Crafted with high-quality fabric, it offers a comfortable and soft fit. With its vibrant pink color and thought-provoking slogan, this shirt adds a touch of whimsy and creativity to your wardrobe, making it a perfect choice for those who enjoy sparking conversations and embracing a sense of fun in their style.'
+      },
+      {
+        image: 'product6.jpg',
+        name: 'Product 6',
+        price: '$25.99',
+        info: 'The black "Native" shirt is a bold and empowering fashion statement. Crafted with premium black fabric, it offers a sleek and versatile look. With its striking typography and powerful message, this shirt celebrates cultural heritage and individuality, making it a perfect choice for those who take pride in their roots and seek to express their unique identity through fashion.'
+      },
+      {
+        image: 'product7.jpg',
+        name: 'Product 7',
+        price: '$9.99',
+        info: 'The black sweater features a charming illustration of an elderly bearded person, adding a touch of whimsy and character. Made with soft and cozy fabric, it provides warmth and comfort during the colder seasons. With its unique design, this sweater is perfect for those who appreciate playful and artistic elements in their wardrobe, celebrating the wisdom and grace of the older generation.'
+      },
+      {
+        image: 'product8.jpg',
+        name: 'Product 8',
+        price: '$39.99',
+        info: 'The white "Dreamer" shirt is a simple yet inspiring piece that embodies the spirit of chasing dreams. Made with premium white fabric, it offers a clean and versatile look. With its captivating "Dreamer" typography, this shirt serves as a reminder to embrace ambition and pursue your aspirations with determination and passion.'
+      }
+    ];
+
+    // Ambil elemen HTML yang akan diubah
+    var productImage = document.getElementById("product-image");
+    var productName = document.getElementById("product-name");
+    var productPrice = document.getElementById("product-price");
+    var productInfo = document.getElementById("product-info");
+
+    // Fungsi untuk memuat deskripsi produk berdasarkan indeks
+    function loadProduct(index) {
+      var product = products[index];
+
+      // Mengisi elemen HTML dengan data produk
+      productImage.src = product.image;
+      productName.textContent = product.name;
+      productPrice.textContent = product.price;
+      productInfo.textContent = product.info;
+    }
+
+    // Memuat deskripsi produk sesuai dengan parameter yang diterima
+    if (productIndex !== null) {
+      loadProduct(productIndex);
+    }
+  </script>
+<!-- WA -->
+<a href="https://api.whatsapp.com/send?phone=628249878026" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<!-- footer -->
+<footer>
+  <div class="footer-container">
+    <div class="column">
+      <h4>ABOUT US</h4>
+      <p style="text-align: left;">Your destination for quality fashion, offering a curated collection of stylish apparel that reflects your unique style, prioritizing quality, sustainability, and exceptional customer service. <a href="about.html">Read More</a></p>
+    </div>
+    <div class="column">
+      <h4>ADDRESS</h4>
+      <div class="address">
+        <strong>RAINS</strong>
+        <br>
+        RT.08 RW.04 Kendalpayak Highway Malang Regency
+        <br>
+        East Java, Indonesia
+      </div>
+      <div class="phone">
+        <i class="fa fa-phone"></i> +62 812-4987-8xxx
+      </div>
+      <div class="email">
+        <i class="fa fa-envelope"></i> <a href="mailto:Rains@gmail.com">rains@gmail.com</a>
+      </div>
+    </div>
+    <div class="column">
+      <h4>SOCCIAL ACCOUNT</h4>
+      <div class="social-icons"  style="text-align: left;">
+        <a href="https://www.facebook.com/fathurrahman.alfajr" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/alfinrendras/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/yoshias99" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="fr-h-rule full"><hr></div>
+  <div class="row copyright-wrapper">
+    <div class="copyright small-12 columns text-center">
+      <div>© 2023 RAINS | All rights reserved</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

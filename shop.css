@@ -1,0 +1,149 @@
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  /* Header */
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 40px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #888888;
+  }
+
+/* konten */
+.shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px;
+  }
+  
+  .product {
+    flex-basis: calc(25% - 40px);
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .product h3,
+  .product .product-price {
+    text-decoration: none;
+  }
+  
+  .product a {
+    text-decoration: none;
+  }
+  
+  .product h3 {
+    color: black;
+  }
+  
+  .product-price {
+    color: orange;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  .product p {
+    font-size: 16px;
+  }
+  
+  .product-image:hover {
+    opacity: 0.8;
+  }
+  
+  /* footer */
+  footer {
+    margin-top: auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    color: #383838;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .column {
+    width: 250px;
+    margin: 20px;
+  }
+  
+  .column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .address, .phone, .email {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .social-icons a {
+    color: #757575;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .social-icons a:hover {
+    color: #FF6600;
+  }
+  /* wa */
+  .whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    background-color: #25D366;
+    color: #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 80px;
+    line-height: 120px;
+    transition: background-color 0.3s;
+  }
+  
+  .whatsapp-float:hover {
+    background-color: #128C7E;
+  }
